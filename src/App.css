@@ -616,3 +616,68 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+/* Mobile Responsiveness Fixes */
+@media (max-width: 768px) {
+  /* Banner Tagline Fix */
+  .banner .tagline {
+    font-size: 14px;
+    padding: 6px 10px;
+    letter-spacing: 0.5px;
+    white-space: normal;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .banner h1 {
+    font-size: 42px;
+  }
+
+  /* Projects Tabs Fix */
+  .project .nav.nav-pills {
+    width: 100%;
+  }
+  .project .nav.nav-pills .nav-link {
+    font-size: 13px;
+    padding: 12px 4px;
+    letter-spacing: 0;
+  }
+
+  /* Newsletter Fix */
+  .newsletter-bx {
+    padding: 40px 20px;
+    margin-top: -80px;
+  }
+  .newsletter-bx h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .new-email-bx {
+    flex-direction: column;
+    padding: 15px;
+    background: transparent;
+  }
+  .new-email-bx::before, .new-email-bx::after {
+    display: none; /* Simplify background for vertical layout */
+  }
+  .new-email-bx {
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.2) -5.91%, rgba(74, 47, 189, 0.2) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .new-email-bx input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 12px;
+  }
+  .new-email-bx input::placeholder {
+    color: #ccc;
+  }
+  .new-email-bx button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+  }
+}
