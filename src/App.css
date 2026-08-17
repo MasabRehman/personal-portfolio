@@ -361,23 +361,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 56%;
 }
 .project .nav.nav-pills {
-  width: 72%;
+  width: 100%;
+  max-width: 720px;
   margin: 0 auto;
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping gracefully on very small screens */
 }
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  flex: 1 1 150px; /* Grow to fill, shrink equally, wrap if < 150px */
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
-  padding: 17px 0;
+  padding: clamp(10px, 2vw, 17px) 0;
   color: #fff;
   width: 100%;
-  font-size: 17px;
-  letter-spacing: 0.8px;
+  font-size: clamp(13px, 1.5vw + 5px, 17px);
+  letter-spacing: clamp(0px, 0.1vw, 0.8px);
   font-weight: 500;
   position: relative;
   transition: 0.3s ease-in-out;
@@ -403,7 +406,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
+  border-radius: 50px 0px 0px 50px;
 }
 .nav-link#projects-tabs-tab-second {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -411,7 +414,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 55px 55px 0;
+  border-radius: 0px 50px 50px 0px;
+}
+/* If tabs wrap on extremely small screens, remove the explicit pill edge borders so it doesn't look broken */
+@media (max-width: 500px) {
+  .project .nav.nav-pills { border-radius: 20px; }
+  .nav-link#projects-tabs-tab-first,
+  .nav-link#projects-tabs-tab-second,
+  .nav-link#projects-tabs-tab-third { border-radius: 0; border: none; border-bottom: 1px solid rgba(255,255,255,0.2); }
 }
 .proj-imgbx {
   position: relative;
@@ -618,94 +628,65 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /* Mobile Responsiveness Fixes */
-@media (max-width: 768px) {
-  /* Banner Tagline Fix */
-  .banner .tagline {
-    font-size: 14px;
-    padding: 8px 12px;
-    letter-spacing: 0.5px;
-    white-space: normal;
-    display: inline-block;
-    max-width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
-  .banner h1 {
-    font-size: 38px;
-    line-height: 1.2;
-  }
+.banner .tagline {
+  /* Fluid text constraints applied cleanly */
+  font-size: clamp(14px, 2.5vw, 20px);
+  padding: clamp(6px, 1.5vw, 8px) clamp(10px, 2vw, 12px);
+  white-space: normal;
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+.banner h1 {
+  font-size: clamp(38px, 6vw, 65px); /* Fluid heading */
+}
 
-  /* Projects Tabs Fix - Stacking vertically prevents squishing */
-  .project .nav.nav-pills {
-    width: 100%;
-    flex-direction: column;
-    border-radius: 35px;
-  }
-  .project .nav.nav-pills .nav-item {
-    width: 100%;
-  }
-  .project .nav.nav-pills .nav-link {
-    font-size: 16px;
-    padding: 15px;
-    letter-spacing: 0.5px;
-    border-radius: 0;
-  }
-  .nav-link#projects-tabs-tab-first {
-    border-radius: 35px 35px 0 0 !important;
-  }
-  .nav-link#projects-tabs-tab-second {
-    border-top: none !important;
-    border-bottom: none !important;
-    border-radius: 0 !important;
-  }
-  .nav-link#projects-tabs-tab-third {
-    border-radius: 0 0 35px 35px !important;
-  }
-
-  /* Newsletter Fix */
-  .newsletter-bx {
-    padding: 30px 15px;
-    margin-top: -60px;
-    border-radius: 30px;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  .newsletter-bx h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .new-email-bx {
-    flex-direction: column;
-    padding: 15px;
-    background: transparent;
-    border-radius: 20px;
-    box-sizing: border-box;
-  }
-  .new-email-bx::before, .new-email-bx::after {
-    display: none; 
-  }
-  .new-email-bx {
-    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.2) -5.91%, rgba(74, 47, 189, 0.2) 111.58%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  .new-email-bx input {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border-radius: 12px;
-    box-sizing: border-box;
-  }
-  .new-email-bx input::placeholder {
-    color: #ccc;
-  }
-  .new-email-bx button {
-    width: 100%;
-    padding: 15px;
-    border-radius: 12px;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
+/* Newsletter Responsive Layout */
+.newsletter-bx {
+  padding: clamp(30px, 5vw, 85px) clamp(15px, 5vw, 125px);
+  margin-top: clamp(-80px, -5vw, -122px);
+  border-radius: clamp(30px, 5vw, 55px);
+  box-sizing: border-box;
+  width: 100%;
+}
+.newsletter-bx h3 {
+  font-size: clamp(22px, 3vw, 28px);
+  text-align: center;
+}
+.new-email-bx {
+  background: #fff;
+  padding: 5px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-wrap: wrap; /* Automatically drops the button below input if screen is too small */
+  align-items: stretch;
+  gap: 10px;
+}
+.new-email-bx input {
+  flex: 1 1 250px; /* Takes up space, but shrinks and wraps if < 250px */
+  color: #121212;
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+  padding: 15px;
+  min-width: 200px;
+}
+.new-email-bx button {
+  flex: 0 1 auto; /* Sizes normally on desktop, drops down on mobile */
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  padding: 15px 40px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 18px;
+}
+@media (max-width: 500px) {
+   /* Final fail-safe constraints for extremely narrow devices (like iPhone SE) */
+  .new-email-bx { flex-direction: column; padding: 15px; background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.1) -5.91%, rgba(74, 47, 189, 0.1) 111.58%); }
+  .new-email-bx::before, .new-email-bx::after { display: none; }
+  .new-email-bx input { width: 100%; background: rgba(255, 255, 255, 0.1); color: #fff; border-radius: 12px; }
+  .new-email-bx button { width: 100%; }
 }
