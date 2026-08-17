@@ -1,0 +1,82 @@
+Here is a comprehensive breakdown of everything I know about your professional background, skills, and projects, organized into ready-to-use sections for your portfolio website. You can mix, match, and adapt these to fit your site's design.
+
+## 1. The "About Me" (Hero Section)
+
+**Short Version:**
+"Hi, I'm Masab Rehman. I'm a Software Engineer and Computer Science student specializing in full-stack web development, machine learning, and game design. From building custom neural networks from scratch to optimizing parallel computing architectures, I love solving complex problems and building robust, user-centric applications."
+
+**Extended Version (For an "About" Page):**
+"I am an undergraduate Computer Science student at GIFT University (expected graduation 2027) with a passion for building systems from the ground up. My technical journey is broad and hands-on: I develop interactive 2D games in Unity, build full-stack web applications using Node.js and PostgreSQL, and engineer machine learning pipelines using Python. Beyond coding, I am an entrepreneur who co-founded Bloomcraft, merging physical products with digital media. I thrive in Linux environments (specifically CachyOS), love tinkering with hardware, and am constantly exploring the bleeding edge of local AI models and high-performance computing."
+
+---
+
+## 2. Technical Arsenal (Skills Section)
+
+You can display these as a grid or a list of tags on your site:
+
+* **Programming Languages:** Python, JavaScript, Java, C#, C++, SQL.
+* **Web Development (Full-Stack):** HTML5, CSS3, React.js, Node.js, PostgreSQL, MongoDB, Vercel.
+* **AI & Machine Learning:** PyTorch, Scikit-Learn, Pandas, NumPy, Matplotlib. Experienced in running local LLMs (Qwen 3 via Ollama), Google Veo, and building custom algorithms (Logistic Regression, KNN, Naive Bayes, Multi-Layer Perceptrons).
+* **Game Development:** Unity (2D physics, UI rendering, C# scripting), Blender, Figma.
+* **Systems & High-Performance Computing:** Linux System Administration (CachyOS, pacman/paru), Parallel Computing (CUDA-C, OpenMP, MPI), Android Debug Bridge (ADB).
+* **Cybersecurity & Cloud:** Google Cloud Platform (GCP) Ubuntu deployments, Nmap, Wireshark, Nikto, Wfuzz, Apache server hardening.
+
+---
+
+## 3. Featured Projects (Portfolio Showcase)
+
+Here are the perfect write-ups for your project cards:
+
+**Plant Survival Simulator (Lead Developer)**
+
+* **Tech Stack:** Unity, C#
+* **Description:** Designed and developed an interactive 2D greenhouse resource management game. Engineered custom C# scripts for complex physics, state evaluation systems, soil condition metrics, and dynamic day/night cycles, complete with custom UI rendering and A4 promotional displays.
+
+**Custom Machine Learning Pipeline: Customer Churn Prediction**
+
+* **Tech Stack:** Python, NumPy, Pandas, Matplotlib
+* **Description:** Built a comprehensive customer churn prediction pipeline entirely from scratch without relying on pre-built Scikit-Learn training classes. Implemented custom modules for Logistic Regression, K-Nearest Neighbors, Naive Bayes, and a Multi-Layer Perceptron (MLP) neural network to analyze structured retention data.
+
+**BloomCraft (Co-founder & Web Developer)**
+
+* **Tech Stack:** JavaScript, Node.js, Vercel
+* **Description:** Co-founded an entrepreneurial venture blending physical artificial floral arrangements with digital technology. Engineered and deployed the business's web platform, integrating scannable QR codes that link customers to customized digital video and audio messages.
+
+**Cloud Security & Web Application Auditing**
+
+* **Tech Stack:** GCP, Ubuntu, Nmap, Wireshark, Nikto
+* **Description:** Deployed a virtual machine instance on Google Cloud Platform and conducted rigorous vulnerability assessments. Configured cloud firewall rules, executed packet captures, and hardened Apache server security headers against potential web exploits.
+
+**4Brothers Supply Storefront**
+
+* **Tech Stack:** Full-Stack Web
+* **Description:** Developed a custom web storefront for an upcoming supply business, featuring dynamic category browsing, an admin dashboard, and a supply chain tracking system.
+
+**High-Performance Computing Simulations**
+
+* **Tech Stack:** CUDA-C, OpenMP, MPI
+* **Description:** Wrote and executed heavily optimized programs for GPU acceleration and multi-threading. Projects included CUDA matrix operations, OpenMP parallel sections, and MPI ring communication scripts for distributed process communication.
+
+---
+
+## 4. Experience & Education (Resume Section)
+
+**Education**
+
+* **GIFT University:** Bachelor of Science, Computer Science (Oct 2023 – Oct 2027)
+* **Lahore Leads University:** Intermediate, Computer Science (Aug 2021 – Sep 2023)
+
+**Professional Experience**
+
+* **Customer Service Agent | Immigration UA (Ukraine, Remote):** Managed global client coordination and structured documentation workflows, successfully closing initial sales within the first month.
+* **Sales & Operations Associate | Burraq Furniture (UK/US Market):** Coordinated international e-commerce logistics and client inquiries, developing robust global communication skills.
+
+---
+
+## 5. "Behind the Code" / Hobbies
+
+*If you want to add a personal touch to your portfolio, these facts make you stand out as a genuine tech enthusiast:*
+
+* **Linux Power User:** Daily driver of CachyOS, actively managing packages and configuring custom game runners (Wine/Lutris) for Windows applications.
+* **Hardware Tinkerer:** Experienced in hardware upgrades, including installing SSD interposer boards and expanding memory on Dell Precision workstations, as well as deep-level Android system debloating.
+* **Gamer & Collaborator:** Enjoys collaborating on academic projects with peers (Hussnain, Salman, M. Junaid, etc.) and breaking down the mechanics of games like Tekken 8, GTA V, and classic arcade platformers like Snow Bros.
